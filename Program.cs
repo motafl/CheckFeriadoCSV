@@ -6,6 +6,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//Programa valida se a agência digitada terá feriado nos próximos dias para gerar alerta ao cliente
+//Busca é realizada em uma base CSV que contém a data dos feriados, tipos de feriados (municipal, estadual), nº agencia e nome da cidade/estado
+
+
 namespace CheckFeriado
 {
     class Program
@@ -69,7 +73,7 @@ namespace CheckFeriado
                                     "     -->    GERAR ALERTA DE FERIADO NOS PRÓXIMOS 15 DIAS\n\n" +
                                     "     |   Informar ao cliente que sua agência não irá atender no feriado " + campos[1] +"\n     |");
                                 Console.WriteLine("     |   Data do Feriado: " + dataFutura);
-                                Console.WriteLine("     |   Cidade da Agência: " + campos[3]);
+                                Console.WriteLine("     |   Cidade da Agência: " + campos[3]); //campos[10]
                                 Console.WriteLine("     |   Número da Agência: " + campos[9]);
                                 qtdeCards++;
                             }                            
